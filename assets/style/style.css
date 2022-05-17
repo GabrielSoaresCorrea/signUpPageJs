@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+}
+
+:root {
+    font-size: 62.5%;
+    --lilac: #463CA3;
+    --pink: #9E18F0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg, var(--lilac), var(--pink));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    height: 50rem;
+    width: 80rem;
+    background: rgb(29, 29, 29);
+    border-radius: 2rem;
+
+    display: flex;
+}
+
+/* imagem a esquerda */
+
+.left-img {
+    max-width: 35rem;
+    height: 100%;
+}
+
+.left-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    border-radius: 2rem 0 0 2rem;
+}
+
+/* login a direita */
+
+.right-login {
+    width: 45rem;
+}
+
+.right-login header {
+    padding-top: 2.2rem;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+.right-login .form-control {
+    padding-inline: 6rem;
+    padding-block: .3rem;
+}
+
+.right-login .form-control label {
+    display: inline-block;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.right-login .form-control input {
+    color: #000;
+    width: 100%;
+
+    border: none;
+    border: 2px solid transparent;
+    border-radius: 0.6rem;
+
+    height: 2.4rem;
+    padding-inline: 1rem;
+    padding-block: 1.6rem;
+    outline: none;
+    font-size: 1.4rem;
+
+    background: rgb(204, 204, 204)
+}
+
+.right-login .form-control input::placeholder {
+    color: rgb(49, 49, 49);
+}
+
+.right-login .form-control small {
+    font-size: 1.2rem;
+    visibility: hidden;
+    margin-left: 0.2rem;
+    color: red;
+}
+
+.right-login form .buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.right-login form button {
+    border: none;
+    background: none;
+    border: 1px solid var(--lilac);
+
+    font-size: 1.8rem;
+
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    border-radius: 1rem;
+
+    margin-inline: 4rem;
+    
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.right-login form button:hover {
+    transition: background 200ms;
+    background: var(--lilac);
+}
+
+/* Certo ou errado */
+
+.form-control.correct input {
+    border: 2px solid green;
+}
+
+.form-control.incorrect input {
+    border: 2px solid red;
+}
+
+.form-control.incorrect small {
+    visibility: visible;
+}
